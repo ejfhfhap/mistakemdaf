@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+	<!-- 클래스명은 패키지 마지막 이름과같음 datasource 에서 상속 -->
+		<property name="username" value="branch01"></property>
+		<property name="password" value="branch01"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
+		<!-- connection 객체 생성 db연결 알아내기 -->
+		<property name="dataSource" ref="dataSource"></property>
+		
+		<!-- mapper 경로 -->
+		<property name="mapperLocations" value="classpath:database/mappers/*Mapper.xml"></property>
+		<!-- tomcat에서 C:\Users\GDJ 60\Downloads\apache-tomcat-9.0.71\webapps\GDJ60_Servlet2\WEB-INF\classes -->
+		
+		<!-- config 경로 -->
+		<property name="configLocation" value="classpath:database/config/MybatisConfig.xml"></property>
+		
+	</bean>
+	
+	<!-- 최종적으로 쓰는것 -->
+	<bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSession">
+		<constructor-arg name="sqlSessionFactory" ref = "sqlSessionFactoryBean"></constructor-arg>
+	</bean>
+</beans>
