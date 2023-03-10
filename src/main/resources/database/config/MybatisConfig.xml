@@ -6,6 +6,19 @@
   <configuration>
   	<typeAliases>
   		<!-- ex )) <typeAlias type="com.iu.s1.product.ProductDTO" alias="ProductDTO"/> -->
+  		<typeAlias type="com.main.branche.board.BoardDTO" alias="BoardDTO"/>
+  		<typeAlias type="com.main.branche.board.BoardPicDTO" alias="BoardPicDTO"/>
+  		
+  		<typeAlias type="com.main.branche.product.ProductDTO" alias="ProductDTO"/>
+  		<typeAlias type="com.main.branche.product.ProductPicDTO" alias="ProductPicDTO"/>
+  		
+  		<typeAlias type="com.main.branche.review.ReviewDTO" alias="ReviewDTO"/>
+  		  		
+  		<typeAlias type="com.main.branche.member.MemberDTO" alias="MemberDTO"/>
+  		<typeAlias type="com.main.branche.inquiry.InquiryDTO" alias="InquiryDTO"/>
+  		
+  		<typeAlias type="com.main.branche.comments.CommentsDTO" alias="CommentsDTO"/>
+  		<typeAlias type="com.main.branche.commentsReply.CommentsReplyDTO" alias="CommentsReplyDTO"/>
   		
   	</typeAliases>
   </configuration>
