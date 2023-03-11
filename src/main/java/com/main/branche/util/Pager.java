@@ -165,7 +165,9 @@ public class Pager {
 
 	
 	public Integer getPerPage() {
-		if(this.perPage == null || this.perPage == 0)this.perPage = 10;
+		if(this.perPage == null || this.perPage == 0) {
+			this.perPage = 20;
+		}
 		
 		return perPage;
 	}

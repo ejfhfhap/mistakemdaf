@@ -7,10 +7,8 @@
   	<typeAliases>
   		<!-- ex )) <typeAlias type="com.iu.s1.product.ProductDTO" alias="ProductDTO"/> -->
   		<typeAlias type="com.main.branche.board.BoardDTO" alias="BoardDTO"/>
-  		<typeAlias type="com.main.branche.board.BoardPicDTO" alias="BoardPicDTO"/>
   		
   		<typeAlias type="com.main.branche.product.ProductDTO" alias="ProductDTO"/>
-  		<typeAlias type="com.main.branche.product.ProductPicDTO" alias="ProductPicDTO"/>
   		
   		<typeAlias type="com.main.branche.review.ReviewDTO" alias="ReviewDTO"/>
   		  		
@@ -19,6 +17,8 @@
   		
   		<typeAlias type="com.main.branche.comments.CommentsDTO" alias="CommentsDTO"/>
   		<typeAlias type="com.main.branche.commentsReply.CommentsReplyDTO" alias="CommentsReplyDTO"/>
+  		
+  		<typeAlias type="java.lang.Integer" alias="Integer"/>
   		
   	</typeAliases>
   </configuration>
